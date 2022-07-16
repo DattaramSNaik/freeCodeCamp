@@ -6,8 +6,8 @@
 		"dotenv": "^16.0.1",
 		"express": "^4.14.0",
 		"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git",
-		"mongodb": "~3.6.0",
-		"mongoose": "~5.4.0"
+		"mongodb": "^4.8.0",
+		"mongoose": "^6.4.4"
 	},
 	"main": "server.js",
 	"scripts": {

@@ -11,11 +11,11 @@ app.use(function(req,res,next){
     next();
 })
 //Middleware for getting method bodyParser Data after every request.
-app.use(function(req,res,next){
-    bodyParser.urlencoded({extended: false})
-    console.log(bodyParser);
-    next();
-})
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 //serving html file
 app.get("/",function(req,res){
     res.sendFile(__dirname+"/views/index.html");

@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 var bodyParser = require("body-parser")
 require('dotenv').config()
 app.use('/public', express.static(__dirname+ '/public'));
-//db connection 
+    //db connection 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>console.log("db connected successfully")).catch((error)=>console.log(error))
 //Middleware for getting method poth and ip address
 app.use(function(req,res,next){

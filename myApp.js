@@ -10,7 +10,7 @@ app.use(function(req,res,next){
 app.get("/",function(req,res){
     res.sendFile(__dirname+"/views/index.html");
   })
-  app.get("/json",function(req,res){
+app.get("/json",function(req,res){
    res.json({"message": "HELLO JSON"})
     // if(process.env.MESSAGE_STYLE==="uppercase"){
     //   res.json({"message": "HELLO JSON"});
@@ -18,6 +18,6 @@ app.get("/",function(req,res){
     //   res.json({"message": "Hello json"});
     // }
     
-  })
+})
 
 module.exports = app;

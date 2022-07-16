@@ -19,5 +19,13 @@ app.get("/json",function(req,res){
     // }
     
 })
-
+function getCurrentDateTime(){
+    return new Date().toString();
+}
+app.get("/now",function(req,res,next){
+   req.time=getCurrentDateTime();
+    next()
+  },function(req,res) {
+    res.json({time:req.time})
+  })
 module.exports = app;
